@@ -1,26 +1,19 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Memory Game</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Memory Game</h1>
-
+  <h1> Memory Game</h1>
+  <div class="game-board"></div>
   <div class="score-board">
-    <p>Tentatives : <span id="attempts">0</span></p>
-    <p>Meilleur score : <span id="best-score">0</span></p>
-    <button id="restart"> Rejouer</button>
+    <p>Tentatives: <span id="tries">0</span></p>
+    <p>Meilleur score: <span id="best">0</span></p>
   </div>
-
-  <div class="game-container" id="game-container"></div>
-
-  <div class="win-message" id="win-message">
-     Bravo ! Tu as gagné ! 
-  </div>
-
   <script src="script.js"></script>
 </body>
 </html>
+
