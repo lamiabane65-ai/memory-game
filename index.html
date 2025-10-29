@@ -1,59 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mini-Jeux Éducatifs - Memory & Typing</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <h1>Memory Game</h1>
-  <div class="score">
-    Tentatives: <span id="attempts">0</span>
-  </div>
+  <header>
+    <h1>Mini-Jeux Éducatifs</h1>
+    <nav>
+      <button id="tab-memory" class="tab active">Memory Game</button>
+      <button id="tab-typing" class="tab">Typing Speed</button>
+    </nav>
+  </header>
 
-  <!-- Grille de jeu -->
-  <div class="memory-game"></div>
+  <main>
+    <!-- MEMORY -->
+    <section id="memory-section" class="panel">
+      <div class="controls">
+        <div>Tentatives : <span id="attempts">0</span></div>
+        <div>Meilleur score : <span id="best-memory">—</span></div>
+        <button id="restart-memory">Rejouer</button>
+      </div>
 
-  <button id="restart">Rejouer</button>
+      <div class="memory-game"></div>
+
+      <div id="victory-memory" class="overlay hidden">
+        <div class="overlay-content">
+          <h2>Bravo 🎉</h2>
+          <p>Tu as terminé en <span id="final-attempts"></span> tentatives</p>
+          <button id="play-again-memory">Rejouer</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- TYPING -->
+    <section id="typing-section" class="panel hidden">
+      <div class="controls">
+        <div>Temps restant : <span id="time-remaining">60</span>s</div>
+        <div>Meilleur WPM : <span id="best-typing">—</span></div>
+        <button id="restart-typing">Nouvelle Partie</button>
+      </div>
+
+      <div class="typing-area">
+        <div id="text-to-type" class="text-box"></div>
+        <textarea id="typing-input" placeholder="Commence à taper ici..." rows="3"></textarea>
+      </div>
+
+      <div class="typing-stats hidden" id="typing-results">
+        <p>WPM : <span id="wpm">0</span></p>
+        <p>Précision : <span id="accuracy">0</span>%</p>
+      </div>
+    </section>
+  </main>
 
   <script src="script.js"></script>
-    
-  <section class="memory-game">
-    <div class="memory-card">
-        <img class="front-face" src="images/bee.jpg" alt="bee">
-        <img class="front-face" src="images/js.jpg" alt="js">    
-    </div>
-    <div class="memory-card">
-        <img class="front-face" src="images/bee.jpg" alt="bee">
-        <img class="front-face" src="images/js.jpg" alt="js">    
-    </div>
-    <div class="memory-card">
-        <img class="front-face" src="images/cat.jpg" alt="cat">
-        <img class="front-face" src="images/js.jpg" alt="js">    
-    </div>
-    <div class="memory-card">
-        <img class="front-face" src="images/cat.jpg" alt="cat">
-        <img class="front-face" src="images/js.jpg" alt="js">    
-    </div>
-    <div class="memory-card">
-        <img class="front-face" src="images/penguin.jpg" alt="penguin">
-        <img class="front-face" src="images/js.jpg" alt="js">    
-    </div>
-    <div class="memory-card">
-        <img class="front-face" src="images/penguin.jpg" alt="penguin">
-        <img class="front-face" src="images/js.jpg" alt="js">    
-    </div>
-    <div class="memory-card">
-        <img class="front-face" src="images/turtle.jpg" alt="turtle">
-        <img class="front-face" src="images/js.jpg" alt="js">    
-    </div>
-    <div class="memory-card">
-        <img class="front-face" src="images/turtle.jpg" alt="turtle">
-        <img class="front-face" src="images/js.jpg" alt="js">    
-    </div>
-  </section>
- 
-    </main>
 </body>
 </html>
